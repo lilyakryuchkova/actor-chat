@@ -21,7 +21,7 @@ class MemoryChatStorage extends ChatStorage with ActorLogging {
 
   def receive = {
     case msg @ ChatMessage(from, message) =>
-      log.debug("New chat message {}", message)
+      log.debug("701New chat message {}", message)
       chatLog = chatLog :+ (message getBytes("UTF-8"))
 
     case GetInitialLog =>
