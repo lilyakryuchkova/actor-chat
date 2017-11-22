@@ -12,7 +12,7 @@ object ChatClient extends App {
 
     val system = ActorSystem("Sys", ConfigFactory.load("client"))
     try {
-      println("enter your login2:")
+      println("enter your login7:")
       val name = StdIn readLine
       val client = system actorOf(Props(new UserSession(name)), "client-" + name)
 

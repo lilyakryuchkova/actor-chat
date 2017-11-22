@@ -16,7 +16,7 @@ class UserSession (val name: String) extends Actor with ActorLogging{
   private val loginTime = System.currentTimeMillis
 
   override def preStart(): Unit =
-    log.info("New session for user {} has been created at {}", name, loginTime)
+    log.info("1New session for user {} has been created at {}", name, loginTime)
 
   val path = "akka.tcp://Sys@127.0.0.1:2552/user/chatService"
   sendIdentifyRequest()
